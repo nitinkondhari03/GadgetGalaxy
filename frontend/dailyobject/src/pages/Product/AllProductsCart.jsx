@@ -1,7 +1,7 @@
 import { Flex, Box, Text, Button,Image,useToast,Spinner} from "@chakra-ui/react";
 
 import { useState } from "react";
-// import HoverImage from "react-hover-image";
+
 import { useNavigate } from "react-router-dom";
 const AllProductsCart = ({
 	Image1,
