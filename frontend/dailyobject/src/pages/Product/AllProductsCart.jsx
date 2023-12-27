@@ -1,7 +1,7 @@
 import { Flex, Box, Text, Button,Image,useToast,Spinner} from "@chakra-ui/react";
 
 import { useState } from "react";
-import HoverImage from "react-hover-image";
+// import HoverImage from "react-hover-image";
 import { useNavigate } from "react-router-dom";
 const AllProductsCart = ({
 	Image1,
@@ -131,9 +131,9 @@ const handlesumit=()=>{
 						/>
 					)}
 
-					<HoverImage
+					<img
 						src={Image1}
-						hoverSrc={Image2}
+						// hoverSrc={Image2}
 						alt={`Picture of `}
 						roundedTop="xl"
 						onClick={() => navigate(`/productdetails/${_id}`)}
