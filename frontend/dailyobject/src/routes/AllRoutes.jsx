@@ -17,58 +17,58 @@ import Checkout from "../pages/Checkout/Checkout";
 import { AdminLogin } from "../admin/pages/AdminLog";
 import { AdminSignup } from "../admin/pages/AdminSignup";
 import { AdminPrivateRoute } from "../admin/component/AdminPrivateRoute";
-
+import {PrivateRoute} from "./PrivateRoute"
 export const AllRoutes = () => {
-	return (
-		<Routes>
-			<Route path="/" element={<Home />} />
-			<Route path="/products/:id" element={<AllProducts />} />
-			<Route path="/login" element={<Login />} />
-			<Route path="/Signup" element={<Signup />} />
-			<Route path="/productdetails/:id" element={<ProductDetails />} />
-			<Route
-				path="/admin"
-				element={
-					<AdminPrivateRoute>
-						<Dashboard />
-					</AdminPrivateRoute>
-				}
-			/>
-			<Route path="/admin/signup" element={<AdminSignup />} />
-			<Route
-				path="/admin/product"
-				element={
-					<AdminPrivateRoute>
-						<Product />
-					</AdminPrivateRoute>
-				}
-			/>
-			<Route path="/admin/login" element={<AdminLogin />} />
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/products/:id" element={<AllProducts />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/Signup" element={<Signup />} />
+      <Route path="/productdetails/:id" element={<ProductDetails />} />
+      <Route
+        path="/admin"
+        element={
+          <AdminPrivateRoute>
+            <Dashboard />
+          </AdminPrivateRoute>
+        }
+      />
+      <Route path="/admin/signup" element={<AdminSignup />} />
+      <Route
+        path="/admin/product"
+        element={
+          <AdminPrivateRoute>
+            <Product />
+          </AdminPrivateRoute>
+        }
+      />
+      <Route path="/admin/login" element={<AdminLogin />} />
 
-			<Route
-				path="/admin/product/add"
-				element={
-					<AdminPrivateRoute>
-						<AddProduct />
-					</AdminPrivateRoute>
-				}
-			/>
+      <Route
+        path="/admin/product/add"
+        element={
+          <AdminPrivateRoute>
+            <AddProduct />
+          </AdminPrivateRoute>
+        }
+      />
 
-			<Route
-				path="/admin/product/edit/:id"
-				element={
-					<AdminPrivateRoute>
-						<EditProduct />
-					</AdminPrivateRoute>
-				}
-			/>
+      <Route
+        path="/admin/product/edit/:id"
+        element={
+          <AdminPrivateRoute>
+            <EditProduct />
+          </AdminPrivateRoute>
+        }
+      />
 
-			<Route path="/search" element={<Search />} />
+      <Route path="/search" element={<Search />} />
 
-			<Route path="/wishlist" element={<Wishlist />} />
-			<Route path="/cart" element={<Cart />}></Route>
-			<Route path="/checkout" element={<Checkout />}></Route>
-			<Route path="*" element={<NotFoundImage />} />
-		</Routes>
-	);
+      <Route path="/wishlist" element={<Wishlist />} />
+      <Route path="/cart" element={<PrivateRoute><Cart /></PrivateRoute>}></Route>
+      <Route path="/checkout" element={<Checkout />}></Route>
+      <Route path="*" element={<NotFoundImage />} />
+    </Routes>
+  );
 };

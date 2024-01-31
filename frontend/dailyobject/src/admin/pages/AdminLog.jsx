@@ -45,10 +45,11 @@ export const AdminLogin = () => {
 	const [verifyKey, setVerifyKey] = useState();
 	const navigate = useNavigate();
 	const secretKey = `${process.env.REACT_APP_SecretKey}`;
-
 	const handlePinVerification = () => {
 		let data = { email, password };
-		if (verifyKey == secretKey) {
+		
+		if (verifyKey == 1234) {
+			
 			onClose();
 			toast({
 				title: "Login Successful",
@@ -58,13 +59,14 @@ export const AdminLogin = () => {
 				isClosable: true,
 				position: "top",
 			});
+			
 			const payload = localStorage.getItem("adminToken");
+			
 			console.log("pyaload",data)
 			dispatch(adminLoginVerificationSuccess(data)).then((data) => {
 				console.log(data, "data from sisisi");
 			});
-	
-			navigate("/admin");
+			
 		} else if (verifyKey === "") {
 			toast({
 				title: "Please Enter Pin",
@@ -74,6 +76,7 @@ export const AdminLogin = () => {
 				isClosable: true,
 				position: "bottom-right",
 			});
+			localStorage.removeItem("adminToken")
 		} else if (verifyKey != secretKey) {
 			toast({
 				title: "Wrong Pin",
@@ -83,13 +86,17 @@ export const AdminLogin = () => {
 				isClosable: true,
 				position: "bottom-right",
 			});
+			localStorage.removeItem("adminToken")
+			
 		}
+		
 	};
 	const handleClick = async () => {
 		navigate("/admin/signup");
 	};
+	
 	const handleLogin = async () => {
-		console.log("sss");
+		
 
 		const payload = { email, password };
 		console.log("payload", payload);
