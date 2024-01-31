@@ -137,7 +137,7 @@ const mockdata = [
 
 export const AdminNav = () => {
 	const isAuth = useSelector((store) => store.adminAuthReducer.isAuth);
-	console.log(("isauth nav", isAuth));
+	
 
 	const dispatch = useDispatch();
 	const navigate = useNavigate();

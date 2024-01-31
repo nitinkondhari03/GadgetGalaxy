@@ -22,7 +22,7 @@ export const ProductCard = ({
 	const navigate = useNavigate();
 	const handleEdit = (id) => {
 		navigate(`/admin/product/edit/${id}`);
-		console.log(id);
+	
 	};
 
 	const handleDelete = async (id) => {
