@@ -1,4 +1,4 @@
-import "./Navbar.css";
+import "./navbar.css";
 import Logo from "./Gadget.png";
 import { Link, useNavigate } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
