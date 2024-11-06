@@ -109,6 +109,7 @@ const Checkout = () => {
           background="white"
           boxShadow="rgba(0,0,0,0.24) 0px 3px 8px"
         >
+          <Link to="/">
           <Box ml="10">
             <Image
               w="80px"
@@ -116,6 +117,7 @@ const Checkout = () => {
               src="https://i.ibb.co/k0J7FB2/Gadget.png"
             ></Image>
           </Box>
+          </Link>
           <Spacer />
           <Box mr="10" mt="4">
             <Image
