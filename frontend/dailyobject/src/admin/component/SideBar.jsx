@@ -59,7 +59,6 @@
 // export const SideBar = ({ children }) => {
 // 	const { isOpen, onOpen, onClose } = useDisclosure();
 
-
 // 	const SidebarContent = ({ onClose, ...rest }) => {
 // 		return (
 // 			<Box
@@ -87,7 +86,7 @@
 // 						key={link.name}
 // 						icon={link.icon}
 // 						// href={link.path}
-						
+
 // 					>
 // 						{link.name}
 // 					</NavItem>

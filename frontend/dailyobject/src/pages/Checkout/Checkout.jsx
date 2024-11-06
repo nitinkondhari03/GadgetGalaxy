@@ -32,7 +32,7 @@ import { useDispatch, useSelector } from "react-redux";
 import SinglePaymentCard from "./SinglePaymentCard";
 import { Link } from "react-router-dom";
 import { postRequestAddress } from "../../redux/shipping/action";
-import { handleRemove } from '../../redux/usercart/action';
+import { handleRemove } from "../../redux/usercart/action";
 const Checkout = () => {
   const cart = useSelector((store) => store.cartReducer.cart);
   const amount = useSelector((store) => store.cartReducer.totalCartAmount);
@@ -84,13 +84,12 @@ const Checkout = () => {
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   const handleRemoveItem = () => {
-     console.log(cart)
-  
-    for(let i=0;i<cart.length;i++){
-      
-        dispatch(handleRemove(cart[i]._id))
+    console.log(cart);
+
+    for (let i = 0; i < cart.length; i++) {
+      dispatch(handleRemove(cart[i]._id));
     }
-}
+  };
   return (
     <Box w="100%">
       <VStack

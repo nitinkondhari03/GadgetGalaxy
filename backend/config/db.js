@@ -5,13 +5,13 @@ require("dotenv").config();
 
 // <--------- connection start-------------> //
 const connection = async () => {
-	try {
-		await mongoose.connect(process.env.mongoUrl);
-		console.log(`Connected to DB`);
-	} catch (error) {
-		console.log(`Can't Connected to DB`);
-		console.log(`Error: ${error}`);
-	}
+  try {
+    await mongoose.connect(process.env.mongoUrl);
+    console.log(`Connected to DB`);
+  } catch (error) {
+    console.log(`Can't Connected to DB`);
+    console.log(`Error: ${error}`);
+  }
 };
 /<---------connection end ------------->/;
 

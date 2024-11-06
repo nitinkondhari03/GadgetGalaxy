@@ -44,7 +44,7 @@ export const EditProduct = () => {
 
 		try {
 			const response = await axios.patch(
-				`https://gadgetgalaxy.cyclic.app/products/update/${id}`,
+				`http://localhost:8080/products/update/${id}`,
 				payload
 			);
 			console.log(response.data);

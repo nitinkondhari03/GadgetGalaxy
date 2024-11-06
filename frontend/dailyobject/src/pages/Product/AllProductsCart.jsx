@@ -37,7 +37,7 @@ const AllProductsCart = ({
         position: "top",
       });
     } else {
-      fetch("https://gadgetgalaxy.cyclic.app/cart", {
+      fetch("http://localhost:8080/cart", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -73,7 +73,7 @@ const AllProductsCart = ({
       Discount_price: Discount_price,
       Quantity: 1,
     };
-    fetch("https://gadgetgalaxy.cyclic.app/cart/add", {
+    fetch("http://localhost:8080/cart/add", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -155,9 +155,10 @@ const AllProductsCart = ({
                 ></Box>
               </Flex>
               <Text
-                h="80px"
-                fontSize={{ md: "10px", lg: "lg" }}
+                h="70px"
+                fontSize={{ md: "10px", md: "md" }}
                 textAlign={"center"}
+                overflow={"hidden"}
               >
                 {Title}
               </Text>

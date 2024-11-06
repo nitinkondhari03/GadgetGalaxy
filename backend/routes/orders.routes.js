@@ -1,8 +1,5 @@
 const express = require("express");
-const {
-    getOrders,
-    addOrder
-} = require ("../controller/orders.controllers")
+const { getOrders, addOrder } = require("../controller/orders.controllers");
 
 const orderRoute = express.Router();
 

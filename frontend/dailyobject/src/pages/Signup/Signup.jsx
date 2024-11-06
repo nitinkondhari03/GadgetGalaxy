@@ -55,7 +55,7 @@ const Signup = () => {
         ) {
             try {
                 const res = await axios.post(
-									`https://gadgetgalaxy.cyclic.app/users/register`,
+									`http://localhost:8080/users/register`,
 									payload
 								);
                 if (res.data.message === "User AlreadyExists") {

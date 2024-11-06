@@ -1,8 +1,8 @@
 const express = require("express");
 const {
-	adminRegister,
-	adminLogin,
-	adminData,
+  adminRegister,
+  adminLogin,
+  adminData,
 } = require("../controller/admin.controller");
 const adminRouter = express.Router();
 
