@@ -189,7 +189,7 @@ export const AdminNav = () => {
             className={classes.hiddenMobile}
           >
             <a href="/" className={classes.link}>
-              Home
+                User Portal
             </a>
             <a href="/admin" className={classes.link}>
               Dashboard

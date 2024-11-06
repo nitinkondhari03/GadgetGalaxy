@@ -52,7 +52,6 @@ export const AdminLogin = () => {
     let data = { email, password };
 
     if (verifyKey == 1234) {
-      onClose();
       toast({
         title: "Login Successful",
         description: "",
@@ -68,6 +67,8 @@ export const AdminLogin = () => {
       dispatch(adminLoginVerificationSuccess(data)).then((data) => {
         console.log(data, "data from sisisi");
       });
+      window.location.reload(); 
+      onClose();
     } else if (verifyKey === "") {
       toast({
         title: "Please Enter Pin",
@@ -89,6 +90,7 @@ export const AdminLogin = () => {
       });
       localStorage.removeItem("adminToken");
     }
+    
   };
   const handleClick = async () => {
     navigate("/admin/signup");
