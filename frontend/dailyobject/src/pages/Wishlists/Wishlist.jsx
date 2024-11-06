@@ -12,7 +12,7 @@ const Wishlist = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/products`)
+      .get(`https://gadgetgalaxy.onrender.com/products`)
       .then((res) => setData(res.data));
   }, []);
   return (

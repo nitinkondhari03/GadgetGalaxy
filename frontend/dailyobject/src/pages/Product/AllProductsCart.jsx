@@ -37,7 +37,7 @@ const AllProductsCart = ({
         position: "top",
       });
     } else {
-      fetch("http://localhost:8080/cart", {
+      fetch("https://gadgetgalaxy.onrender.com/cart", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -73,7 +73,7 @@ const AllProductsCart = ({
       Discount_price: Discount_price,
       Quantity: 1,
     };
-    fetch("http://localhost:8080/cart/add", {
+    fetch("https://gadgetgalaxy.onrender.com/cart/add", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,

@@ -14,9 +14,9 @@ export const Dashboard = () => {
   const [user, setUser] = useState([]);
   const [order, setOrder] = useState([]);
   const [earning, setEarning] = useState([]);
-  const usersUrl = "http://localhost:8080/users";
-  const adminsUrl = "http://localhost:8080/admin";
-  const ordersUrl = "http://localhost:8080/shipping";
+  const usersUrl = "https://gadgetgalaxy.onrender.com/users";
+  const adminsUrl = "https://gadgetgalaxy.onrender.com/admin";
+  const ordersUrl = "https://gadgetgalaxy.onrender.com/shipping";
 
   useEffect(() => {
     dispatch(getData());

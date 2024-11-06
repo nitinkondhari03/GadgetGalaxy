@@ -44,7 +44,7 @@ export const EditProduct = () => {
 
 		try {
 			const response = await axios.patch(
-				`http://localhost:8080/products/update/${id}`,
+				`https://gadgetgalaxy.onrender.com/products/update/${id}`,
 				payload
 			);
 			console.log(response.data);

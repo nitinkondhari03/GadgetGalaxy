@@ -46,7 +46,7 @@ export const getCartData = (dispatch) => {
 	dispatch(getCartDataRequestAction());
 
 	axios
-		.get("http://localhost:8080/cart", {
+		.get("https://gadgetgalaxy.onrender.com/cart", {
 			headers: {
 				Authorization: `Bearer ${localStorage.getItem("token")}`,
 				"Content-Type": "application/json",
@@ -65,7 +65,7 @@ export const getCartData = (dispatch) => {
 export const handleQuantity = (id, quantity) => (dispatch) => {
 	axios
 		.patch(
-			`http://localhost:8080/cart/update/${id}`,
+			`https://gadgetgalaxy.onrender.com/cart/update/${id}`,
 			{
 				Quantity: +quantity,
 			},
@@ -78,7 +78,7 @@ export const handleQuantity = (id, quantity) => (dispatch) => {
 		)
 		.then((res) => {
 			axios
-				.get(`http://localhost:8080/cart`, {
+				.get(`https://gadgetgalaxy.onrender.com/cart`, {
 					headers: {
 						Authorization: `Bearer ${localStorage.getItem("token")}`,
 						"Content-Type": "application/json",
@@ -94,7 +94,7 @@ export const handleQuantity = (id, quantity) => (dispatch) => {
 
 export const handleRemove = (id) => (dispatch) => {
 	axios
-		.delete(`http://localhost:8080/cart/delete/${id}`, {
+		.delete(`https://gadgetgalaxy.onrender.com/cart/delete/${id}`, {
 			headers: {
 				Authorization: `Bearer ${localStorage.getItem("token")}`,
 				"Content-Type": "application/json",
@@ -102,7 +102,7 @@ export const handleRemove = (id) => (dispatch) => {
 		})
 		.then((res) => {
 			axios
-				.get(`http://localhost:8080/cart`, {
+				.get(`https://gadgetgalaxy.onrender.com/cart`, {
 					headers: {
 						Authorization: `Bearer ${localStorage.getItem("token")}`,
 						"Content-Type": "application/json",

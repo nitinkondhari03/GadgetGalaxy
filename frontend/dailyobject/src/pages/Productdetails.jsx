@@ -36,7 +36,7 @@ export const ProductDetails = () => {
   let token = localStorage.getItem("token");
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/products/${x}`)
+      .get(`https://gadgetgalaxy.onrender.com/products/${x}`)
       .then((res) => setdata(res.data));
   }, [x]);
 
@@ -51,7 +51,7 @@ export const ProductDetails = () => {
         position: "top",
       });
     } else {
-      fetch("http://localhost:8080/cart", {
+      fetch("https://gadgetgalaxy.onrender.com/cart", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -87,7 +87,7 @@ export const ProductDetails = () => {
       Quantity: 1,
     };
 
-    fetch("http://localhost:8080/cart/add", {
+    fetch("https://gadgetgalaxy.onrender.com/cart/add", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,

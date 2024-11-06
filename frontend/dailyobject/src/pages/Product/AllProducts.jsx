@@ -29,7 +29,7 @@ const AllProducts = () => {
       setcases(true);
     }
     axios
-      .get(`http://localhost:8080/products?Category=${x}`)
+      .get(`https://gadgetgalaxy.onrender.com/products?Category=${x}`)
       .then((res) => setdata(res.data));
   }, [x]);
 
@@ -52,7 +52,7 @@ const AllProducts = () => {
   const productcategory = (category) => {
     setdata([]);
     axios
-      .get(`http://localhost:8080/products?Category=${category}`)
+      .get(`https://gadgetgalaxy.onrender.com/products?Category=${category}`)
       .then((res) => setdata(res.data));
   };
 
@@ -61,7 +61,7 @@ const AllProducts = () => {
     setdata([]);
     axios
       .get(
-        `http://localhost:8080/products?Category=Watchbands&Category=Charging Solutions&Category=Macbook Sleeve&Category=Messanger Bags&Category=Eyewear&Category=Desks`
+        `https://gadgetgalaxy.onrender.com/products?Category=Watchbands&Category=Charging Solutions&Category=Macbook Sleeve&Category=Messanger Bags&Category=Eyewear&Category=Desks`
       )
       .then((res) => setdata(res.data));
   };
@@ -70,7 +70,7 @@ const AllProducts = () => {
     setdata([]);
     axios
       .get(
-        `http://localhost:8080/products?Category=Passport wallet&Category=Airpods pro Cases&Category=Eyewear cases&Category=Ipad cover&Category=Laptop cover&Category=Phone Cases`
+        `https://gadgetgalaxy.onrender.com/products?Category=Passport wallet&Category=Airpods pro Cases&Category=Eyewear cases&Category=Ipad cover&Category=Laptop cover&Category=Phone Cases`
       )
       .then((res) => setdata(res.data));
   };

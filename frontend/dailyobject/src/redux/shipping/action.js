@@ -25,7 +25,7 @@ export const postRequestAddress = (payload) => (dispatch) => {
 	dispatch(getpostRequest());
 	axios
 		.post(
-			"http://localhost:8080/shipping/add",
+			"https://gadgetgalaxy.onrender.com/shipping/add",
 
 			payload
 		)
@@ -41,7 +41,7 @@ export const postRequestAddress = (payload) => (dispatch) => {
 export const getRequestAddress = () => (dispatch) => {
 	dispatch(getpostRequest());
 	axios
-		.get("http://localhost:8080/shipping")
+		.get("https://gadgetgalaxy.onrender.com/shipping")
 		.then((res) => {
 			console.log("get", res.data);
 			dispatch(getdataSuccessAddress(res.data));

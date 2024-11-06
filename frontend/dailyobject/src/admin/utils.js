@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const deleteProduct = async (id) => {
   try {
-    await axios.delete(`http://localhost:8080/products/delete/${id}`);
+    await axios.delete(`https://gadgetgalaxy.onrender.com/products/delete/${id}`);
     console.log("delete");
   } catch (error) {
     console.log(error);
@@ -12,7 +12,7 @@ export const deleteProduct = async (id) => {
 export const AdminRegister = async (payload) => {
   try {
     const response = await axios.post(
-      `http://localhost:8080/admin/register`,
+      `https://gadgetgalaxy.onrender.com/admin/register`,
       payload
     );
     console.log(response);

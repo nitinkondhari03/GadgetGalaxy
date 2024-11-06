@@ -97,7 +97,7 @@ export const AdminLogin = () => {
     if (email !== "" && password !== "") {
       try {
         const response = await axios.post(
-          "http://localhost:8080/admin/login",
+          "https://gadgetgalaxy.onrender.com/admin/login",
           payload
         );
         console.log(response);
