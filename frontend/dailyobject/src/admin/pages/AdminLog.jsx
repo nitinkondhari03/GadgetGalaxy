@@ -24,17 +24,19 @@ import {
   PinInput,
   PinInputField,
   useToast,
+  useEditable,
 } from "@chakra-ui/react";
 
 import { AdminNav } from "../component/AdminNav";
 import { unstable_HistoryRouter, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { adminLoginVerificationSuccess } from "../../redux/adminauth/action";
 
 export const AdminLogin = () => {
   const isAuth = useSelector((store) => store.adminAuthReducer.isAuth);
+  console.log(isAuth)
 
   const toast = useToast();
   const dispatch = useDispatch();
@@ -44,6 +46,7 @@ export const AdminLogin = () => {
   const [password, setPassword] = useState();
   const [verifyKey, setVerifyKey] = useState();
   const navigate = useNavigate();
+ 
   const secretKey = `${process.env.REACT_APP_SecretKey}`;
   const handlePinVerification = () => {
     let data = { email, password };
@@ -123,11 +126,28 @@ export const AdminLogin = () => {
       }
     }
   };
-
+if(isAuth){
+  navigate("/admin")
+}
   return (
     <>
       <AdminNav />
-      <div className="admin_log" style={{ marginTop: "60px" }}>
+      {isAuth?<div>
+        <div className="admin_log" style={{ marginTop: "60px" }}>
+        <Container size={420} my={40}>
+          <Title
+            align="center"
+            sx={(theme) => ({
+              fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+              fontWeight: 900,
+            })}
+          >
+            Welcome To Admin Portal
+          </Title>
+        </Container>
+      
+      </div>
+      </div>:<div className="admin_log" style={{ marginTop: "60px" }}>
         <Container size={420} my={40}>
           <Title
             align="center"
@@ -256,7 +276,7 @@ export const AdminLogin = () => {
         ) : (
           ""
         )}
-      </div>
+      </div>}
     </>
   );
 };
